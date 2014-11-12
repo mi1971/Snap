@@ -8,4 +8,7 @@ autopublish
 insecure
 iron:router
 mizzao:bootstrap-3
+aldeed:collection2
+aldeed:autoform
+peppelg:bootstrap-3-modal
 
