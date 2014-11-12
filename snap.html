@@ -1,0 +1,168 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>snap</title>
+</head>
+
+<body>
+
+  {{> evidenceOverview}}
+</body>
+
+<template name="evidenceOverview">
+    <form role="form" class="requirement-checkboxes">
+        <div class="container">
+            <div class="row shaded" >
+
+
+                <div class="col-md-3">
+                    <!-- *** Identification ***-->
+
+                    <p>Identification</p>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> License Only
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Full Identification
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> FHO Identification
+                        </label>
+                    </div>
+
+                    <!-- *** Income ***-->
+
+                    <p>Income</p>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> PAYG Normal
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Self Employed
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="indented">
+                            <input type="checkbox" class="indented"> Through Company/Trust
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Government Income
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Rental Income
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Proposed Rent
+                        </label>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+                    <!-- *** Contribution ***-->
+
+                    <p>Contribution</p>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Genuine Savings
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Cash Contribution
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Gifted Funds
+                        </label>
+                    </div>
+
+                    <!-- *** Commitments ***-->
+
+                    <p>Commitments</p>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> 1
+                        </label>
+                        or
+                        <label>
+                            <input type="checkbox"> 3 Months Home Loans
+                        </label>
+                    </div>
+                    <div class="checkbox">
+
+                        <label>
+                            <input type="checkbox"> 1
+                        </label>
+                        or
+                        <label>
+                            <input type="checkbox"> 3 Months Personal Loans
+                        </label>
+                    </div>
+                    <div class="checkbox">
+
+                        <label>
+                            <input type="checkbox"> 1
+                        </label>
+                        or
+                        <label>
+                            <input type="checkbox"> 3 Months Credit Cards
+                        </label>
+                    </div>
+                    <!-- *** Security ***-->
+
+                    <p>Security</p>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Purchase Contract
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Existing Property
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Construction
+                        </label>
+                    </div>
+                </div>
+
+            <div class="col-md-6">
+                <div style="background-color: #ffffff; border:solid 1px #c0c0c0; padding:10px; margin-top:37px">
+                {{#each checklist}}
+                    <div style="padding:10px; border-bottom:solid 1px #c0c0c0">
+                        <b>{{title}}</b><br/>
+                        {{description}}
+                    </div>
+                {{/each}}
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+
+    </form>
+</template>

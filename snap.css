@@ -1,0 +1,21 @@
+/* CSS declarations go here */
+.indented{
+    margin-left:30px;
+}
+.requirement-checkboxes p{
+    border:none;
+    padding-top:7px;
+    padding-left:10px;
+    padding-bottom: -3px;
+}
+
+.requirement-checkboxes .checkbox{
+    border:solid 1px #c0c0c0;
+    padding:10px;
+    background-color: #ffffff;
+    color:#6E6E6E;
+}
+
+.shaded{
+    background-color: #fafafa;
+}
