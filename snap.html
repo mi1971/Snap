@@ -5,8 +5,114 @@
 
 <body>
 
-  {{> evidenceOverview}}
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <button type="button" class="btn btn-default btn-back pull-left hidden" onclick="history.back()">
+            <i class="fa fa-lg fa-chevron-left"></i>
+            <span>Back</span>
+        </button>
+        <button type="button" class="btn btn-default btn-menu pull-left offcanvas-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+            <span>Menu</span>
+        </button>
+        <a class="navbar-brand" title="Customers v{{getAppVersion}}" href="/">Customers</a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        Contacts
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-building-o"></i>
+                        Companies
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-gears"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+
+
+    <div class="row">
+        <div class="col-sm-5 bootcards-list">
+
+            {{> searchBox}}
+
+        </div>
+        <div class="col-sm-7 bootcards-cards">
+
+            {{> insertEmailTemplateForm}}
+            {{> evidenceOverview}}
+        </div>
+    </div>
+</div>
 </body>
+
+
+
+<template name="searchBox">
+    {{> esInput class="form-control" index="email-templates" placeholder="Search..." }}
+
+    <div class="bootcards-list" style="margin-top:22px;">
+        <div class="panel panel-default">
+            <div class="list-group">
+                {{#esEach index="email-templates"}}
+                    <a class="list-group-item" href="#">
+                        <img src="/images/Sofia Acey.jpg" class="img-rounded pull-left"/>
+                        <h4 class="list-group-item-heading">Acey, Sofia</h4>
+                        <p class="list-group-item-text">{{name}}</p>
+                    </a>
+                {{/esEach}}
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</template>
+
+<template name="insertEmailTemplateForm">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title pull-left">Card Title</h3>
+            <a class="btn btn-default pull-right" href="#">
+                <i class="fa fa-check"></i>
+                Button
+            </a>
+        </div>
+        <div class="panel-body">
+            {{> quickForm collection="EmailTemplates" id="insertEmailTemplateForm" type="insert"}}
+
+        </div>
+        <div class="panel-footer">
+            <small>Card footer...</small>
+        </div>
+    </div>
+</template>
+
+
 
 <template name="evidenceOverview">
     <form role="form" class="requirement-checkboxes">

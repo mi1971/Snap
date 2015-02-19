@@ -11,4 +11,19 @@ mizzao:bootstrap-3
 aldeed:collection2
 aldeed:autoform
 peppelg:bootstrap-3-modal
+momentjs:moment
+alethes:pages
+yogiben:pretty-email
+yogiben:autoform-file
+accounts-base
+accounts-ui
+email
+sacha:spin
+yogiben:autoform-modals
+mrt:accounts-ui-bootstrap-3
+chrismbeckett:toastr
 
+mpowaga:autoform-summernote
+natestrauser:font-awesome
+matteodem:easy-search
+pcuci:bootcards
